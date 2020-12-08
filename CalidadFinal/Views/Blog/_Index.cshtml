@@ -5,8 +5,8 @@
 
 <html>
 <head>
-    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.0/css/bootstrap.min.css" integrity="sha384-9aIt2nRpC12Uk9gS9baDl411NQApFmC26EwAOH8WgZl5MYYxFfc+NcPb1dKGj7Sk" crossorigin="anonymous">
-    <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.5.0/js/bootstrap.min.js" integrity="sha384-OgVRvuATP1z7JjHLkuOU7Xw704+h835Lr+6QL9UvYjZE3Ipu6Tp75j7Bh/kR0JKI" crossorigin="anonymous"></script>
+    <link rel="stylesheet" href="~/lib/bootstrap/dist/css/bootstrap.min.css" />
+
 </head>
 
 <body style="background-color: #0c002e">
@@ -14,39 +14,39 @@
     <div class="col-7">
         @foreach (var item in @Model)
         {
-            <div  style="background-color: #adb5bd" class="card">
+            <div style="background-color: #adb5bd" class="card">
                 <h3 class="card-header">
-                    <a style="color: #0b2e13" href="/Post/DetallePost?id=@item.Id">
-                    <p style = "font-family:Arial, Helvetica, sans-serif;">
-                        @item.Titulo
-                    </p>
-                       </a>
-                         </h3>
-                        <h5>
-                            @ViewBag.resumen[@item.Id]
-                        </h5>
-                        
-                 
-               
+                    <a style="color: #0b2e13" href="/Blog/DetallePost?id=@item.Id">
+                        <p style="font-family:Arial, Helvetica, sans-serif;">
+                            @item.Titulo
+                        </p>
+                    </a>
+                </h3>
+                <h5>
+                    @ViewBag.resumen[@item.Id] <a onclick="eliminar('/Blog/EliminarNotra?IdNota=@item.Id')" href="#">eliminar</a><a href="/Blog/EditarNota?IdNota=@item.Id">editar</a>
+                </h5>
+
+
                 <div class="card-body">
                     @foreach (var details in ViewBag.detalles)
                     {
                         if (details.IdNota == item.Id)
                         {
                             <div class="col-3">
-                                <span style="color: #0b2e13 " class="badge badge-success">@foreach (var item1 in @ViewBag.etiquetas)
-                                                                                          {
-                                                                                              if (details.IdEtiqueta==item1.Id)
-                                                                                              {
-                                                                                                  @item1.Nombre
-                                                                                              }
-                                                                                          } </span> 
+                                <span style="color: #0b2e13 " class="badge badge-success">
+                                    @foreach (var item1 in @ViewBag.etiquetas)
+                                    {
+                                        if (details.IdEtiqueta == item1.Id)
+                                        {
+                                            @item1.Nombre
+                                        }
+                                    }
+                                </span>
                                 <svg width="1em" height="1em" viewBox="0 0 16 16" class="bi bi-tag-fill" fill="currentColor" xmlns="http://www.w3.org/2000/svg">
                                     <path fill-rule="evenodd" d="M2 1a1 1 0 0 0-1 1v4.586a1 1 0 0 0 .293.707l7 7a1 1 0 0 0 1.414 0l4.586-4.586a1 1 0 0 0 0-1.414l-7-7A1 1 0 0 0 6.586 1H2zm4 3.5a1.5 1.5 0 1 1-3 0 1.5 1.5 0 0 1 3 0z"/>
                                 </svg>
                             </div>
                         }
-                      
                     }
                 </div>
             </div>
@@ -54,5 +54,19 @@
     </div>
 </div>
 </body>
-</html>
+<script>          
+  function eliminar(a) {
 
+            var url = a;
+
+            $.get(url, function (respuesta) {
+
+                $("#contenedor").html(respuesta);
+            });
+            e.preventDefault();
+
+        }
+
+</script>
+
+</html>

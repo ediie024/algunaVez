@@ -1,0 +1,27 @@
+<html lang="en">
+
+
+<head>
+    <meta charset="UTF-8">
+    
+  
+</head>
+
+<body style="background-color: #0c002e">
+<div class="row">
+    <div class="col-7" style="background-color: #adb5bd">
+        <form action="/Blog/EditarNotaA" method="post">
+            <label>Titulo</label>
+            
+            <input name="Titulo" value="@ViewBag.Nota.Titulo"/>
+            <label>Contenido</label>
+            <input name="Contenido" value="@ViewBag.Nota.Contenido"/>
+            <input type="hidden" value="@ViewBag.Nota.Id">
+            <button>Guardar</button>
+        </form>
+       
+    </div>
+</div>
+</body>
+</html>
+

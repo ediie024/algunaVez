@@ -22,8 +22,26 @@
     <select />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="76d55b41-dea5-4784-8734-44067fde36a8" name="Default Changelist" comment="version 2">
+    <list default="true" id="76d55b41-dea5-4784-8734-44067fde36a8" name="Default Changelist" comment="version 2&#10;version 2.0000001">
+      <change afterPath="$PROJECT_DIR$/CalidadFinal/Views/Blog/EditarNota.cshtml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/.idea.CalidadFinal/.idea/contentModel.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/.idea.CalidadFinal/.idea/contentModel.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/.idea.CalidadFinal/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/.idea.CalidadFinal/.idea/workspace.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/CalidadFinal/Controllers/BlogController.cs" beforeDir="false" afterPath="$PROJECT_DIR$/CalidadFinal/Controllers/BlogController.cs" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/CalidadFinal/Views/Blog/CrearBlog.cshtml" beforeDir="false" afterPath="$PROJECT_DIR$/CalidadFinal/Views/Blog/CrearNota.cshtml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/CalidadFinal/Views/Blog/Index.cshtml" beforeDir="false" afterPath="$PROJECT_DIR$/CalidadFinal/Views/Blog/Index.cshtml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/CalidadFinal/Views/Blog/_Index.cshtml" beforeDir="false" afterPath="$PROJECT_DIR$/CalidadFinal/Views/Blog/_Index.cshtml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/CalidadFinal/bin/Debug/net5.0/CalidadFinal.Views.dll" beforeDir="false" afterPath="$PROJECT_DIR$/CalidadFinal/bin/Debug/net5.0/CalidadFinal.Views.dll" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/CalidadFinal/bin/Debug/net5.0/CalidadFinal.Views.pdb" beforeDir="false" afterPath="$PROJECT_DIR$/CalidadFinal/bin/Debug/net5.0/CalidadFinal.Views.pdb" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/CalidadFinal/bin/Debug/net5.0/CalidadFinal.dll" beforeDir="false" afterPath="$PROJECT_DIR$/CalidadFinal/bin/Debug/net5.0/CalidadFinal.dll" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/CalidadFinal/bin/Debug/net5.0/CalidadFinal.pdb" beforeDir="false" afterPath="$PROJECT_DIR$/CalidadFinal/bin/Debug/net5.0/CalidadFinal.pdb" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/CalidadFinal/bin/Debug/net5.0/ref/CalidadFinal.dll" beforeDir="false" afterPath="$PROJECT_DIR$/CalidadFinal/bin/Debug/net5.0/ref/CalidadFinal.dll" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/CalidadFinal/obj/Debug/net5.0/CalidadFinal.Views.dll" beforeDir="false" afterPath="$PROJECT_DIR$/CalidadFinal/obj/Debug/net5.0/CalidadFinal.Views.dll" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/CalidadFinal/obj/Debug/net5.0/CalidadFinal.Views.pdb" beforeDir="false" afterPath="$PROJECT_DIR$/CalidadFinal/obj/Debug/net5.0/CalidadFinal.Views.pdb" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/CalidadFinal/obj/Debug/net5.0/CalidadFinal.dll" beforeDir="false" afterPath="$PROJECT_DIR$/CalidadFinal/obj/Debug/net5.0/CalidadFinal.dll" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/CalidadFinal/obj/Debug/net5.0/CalidadFinal.pdb" beforeDir="false" afterPath="$PROJECT_DIR$/CalidadFinal/obj/Debug/net5.0/CalidadFinal.pdb" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/CalidadFinal/obj/Debug/net5.0/Razor/Views/Blog/Index.cshtml.g.cs" beforeDir="false" afterPath="$PROJECT_DIR$/CalidadFinal/obj/Debug/net5.0/Razor/Views/Blog/Index.cshtml.g.cs" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/CalidadFinal/obj/Debug/net5.0/Razor/Views/Blog/_Index.cshtml.g.cs" beforeDir="false" afterPath="$PROJECT_DIR$/CalidadFinal/obj/Debug/net5.0/Razor/Views/Blog/_Index.cshtml.g.cs" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/CalidadFinal/obj/Debug/net5.0/ref/CalidadFinal.dll" beforeDir="false" afterPath="$PROJECT_DIR$/CalidadFinal/obj/Debug/net5.0/ref/CalidadFinal.dll" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -49,6 +67,7 @@
         <option value="$PROJECT_DIR$/CalidadFinal/Views/Shared/_Layout.cshtml" />
         <option value="$PROJECT_DIR$/CalidadFinal/Views/Blog/Index.cshtml" />
         <option value="$PROJECT_DIR$/CalidadFinal/Views/Blog/_Index.cshtml" />
+        <option value="$PROJECT_DIR$/CalidadFinal/Views/Blog/EditarNota.cshtml" />
         <option value="$PROJECT_DIR$/CalidadFinal/Controllers/BlogController.cs" />
       </list>
     </option>
@@ -112,7 +131,8 @@
       <option name="presentableId" value="Default" />
       <updated>1607369271616</updated>
       <workItem from="1607369295712" duration="8109000" />
-      <workItem from="1607386084526" duration="7466000" />
+      <workItem from="1607386084526" duration="8165000" />
+      <workItem from="1607401047183" duration="5095000" />
     </task>
     <task id="LOCAL-00001" summary="version 2">
       <created>1607400037838</created>
@@ -121,7 +141,14 @@
       <option name="project" value="LOCAL" />
       <updated>1607400037838</updated>
     </task>
-    <option name="localTasksCounter" value="2" />
+    <task id="LOCAL-00002" summary="version 2&#10;version 2.0000001">
+      <created>1607400280535</created>
+      <option name="number" value="00002" />
+      <option name="presentableId" value="LOCAL-00002" />
+      <option name="project" value="LOCAL" />
+      <updated>1607400280535</updated>
+    </task>
+    <option name="localTasksCounter" value="3" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
@@ -139,33 +166,35 @@
         </entry>
       </map>
     </option>
+    <option name="oldMeFiltersMigrated" value="true" />
   </component>
   <component name="VcsManagerConfiguration">
     <option name="CLEAR_INITIAL_COMMIT_MESSAGE" value="true" />
     <MESSAGE value="version 2" />
-    <option name="LAST_COMMIT_MESSAGE" value="version 2" />
+    <MESSAGE value="version 2&#10;version 2.0000001" />
+    <option name="LAST_COMMIT_MESSAGE" value="version 2&#10;version 2.0000001" />
   </component>
   <component name="WindowStateProjectService">
     <state width="488" height="464" key="DebuggerActiveHint" timestamp="1607376088958">
       <screen x="0" y="0" width="1920" height="1040" />
     </state>
     <state width="488" height="464" key="DebuggerActiveHint/0.0.1920.1040/-1920.0.1920.1040@0.0.1920.1040" timestamp="1607376088958" />
-    <state width="1877" height="282" key="GridCell.Tab.0.bottom" timestamp="1607399896690">
+    <state width="1877" height="282" key="GridCell.Tab.0.bottom" timestamp="1607405266539">
       <screen x="0" y="0" width="1920" height="1040" />
     </state>
-    <state width="1877" height="282" key="GridCell.Tab.0.bottom/0.0.1920.1040/-1920.0.1920.1040@0.0.1920.1040" timestamp="1607399896690" />
-    <state width="1877" height="282" key="GridCell.Tab.0.center" timestamp="1607399896690">
+    <state width="1877" height="282" key="GridCell.Tab.0.bottom/0.0.1920.1040/-1920.0.1920.1040@0.0.1920.1040" timestamp="1607405266539" />
+    <state width="1877" height="282" key="GridCell.Tab.0.center" timestamp="1607405266539">
       <screen x="0" y="0" width="1920" height="1040" />
     </state>
-    <state width="1877" height="282" key="GridCell.Tab.0.center/0.0.1920.1040/-1920.0.1920.1040@0.0.1920.1040" timestamp="1607399896690" />
-    <state width="1877" height="282" key="GridCell.Tab.0.left" timestamp="1607399896690">
+    <state width="1877" height="282" key="GridCell.Tab.0.center/0.0.1920.1040/-1920.0.1920.1040@0.0.1920.1040" timestamp="1607405266539" />
+    <state width="1877" height="282" key="GridCell.Tab.0.left" timestamp="1607405266539">
       <screen x="0" y="0" width="1920" height="1040" />
     </state>
-    <state width="1877" height="282" key="GridCell.Tab.0.left/0.0.1920.1040/-1920.0.1920.1040@0.0.1920.1040" timestamp="1607399896690" />
-    <state width="1877" height="282" key="GridCell.Tab.0.right" timestamp="1607399896690">
+    <state width="1877" height="282" key="GridCell.Tab.0.left/0.0.1920.1040/-1920.0.1920.1040@0.0.1920.1040" timestamp="1607405266539" />
+    <state width="1877" height="282" key="GridCell.Tab.0.right" timestamp="1607405266539">
       <screen x="0" y="0" width="1920" height="1040" />
     </state>
-    <state width="1877" height="282" key="GridCell.Tab.0.right/0.0.1920.1040/-1920.0.1920.1040@0.0.1920.1040" timestamp="1607399896690" />
+    <state width="1877" height="282" key="GridCell.Tab.0.right/0.0.1920.1040/-1920.0.1920.1040@0.0.1920.1040" timestamp="1607405266539" />
     <state width="1877" height="375" key="GridCell.Tab.1.bottom" timestamp="1607386053477">
       <screen x="0" y="0" width="1920" height="1040" />
     </state>
@@ -230,10 +259,10 @@
       <screen x="0" y="0" width="1920" height="1040" />
     </state>
     <state width="1877" height="375" key="GridCell.Tab.4.right/0.0.1920.1040/-1920.0.1920.1040@0.0.1920.1040" timestamp="1607386053478" />
-    <state x="552" y="253" key="Vcs.Push.Dialog.v2" timestamp="1607400062988">
+    <state x="552" y="253" key="Vcs.Push.Dialog.v2" timestamp="1607400283886">
       <screen x="0" y="0" width="1920" height="1040" />
     </state>
-    <state x="552" y="253" key="Vcs.Push.Dialog.v2/0.0.1920.1040/-1920.0.1920.1040@0.0.1920.1040" timestamp="1607400062988" />
+    <state x="552" y="253" key="Vcs.Push.Dialog.v2/0.0.1920.1040/-1920.0.1920.1040@0.0.1920.1040" timestamp="1607400283886" />
     <state x="92" y="92" width="1736" height="856" key="com.intellij.history.integration.ui.views.DirectoryHistoryDialog" timestamp="1607370671278">
       <screen x="0" y="0" width="1920" height="1040" />
     </state>

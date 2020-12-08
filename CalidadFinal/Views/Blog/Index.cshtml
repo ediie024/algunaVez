@@ -1,17 +1,42 @@
 
-
-<h1>Lista de Canciones</h1>
-<form action="/" method="get">
-    <input type="text" id="busqueda" name="busqueda" placeholder="Lista Reproduccion"/>
-</form>
-
-
-<div id="contenedor">
+ <link rel="stylesheet" href="~/lib/bootstrap/dist/css/bootstrap.min.css" />
+ <form action="/" method="get">
+     
+     <input type="text" id="busqueda" name="busqueda" placeholder="buscar"/>
+     
+ </form>
+ 
     
-    
+
+<div class="container">
+    <div class="row">
+        
+            <div class="col-sm-2">
+                Tags
+                <table class="table">
+                    @foreach (var item in ViewBag.etiquetas)
+                    {
+                        <tr>
+                            <td> <a id="buton" onclick="reproducir('/Blog/_index?busqueda=@item.Nombre')"href="#"  >@item.Nombre</a></td>
+                            
+                        </tr>
+                        
+
+                    }
+                </table>
+
+            </div>
+        <div id="contenedor" class="col-sm-7">
+
+
+        </div>
+        <div class="col-sm-3">
+            
+        </div>
+        </div>
+   
 </div>
-
-<script>
+ <script>
 function init(){
         $.ajax({   
         url:'/Blog/_index?busqueda='+ $('#busqueda').val()
@@ -24,7 +49,20 @@ function init(){
   init();
 });
 init();
+</script>
+ <script>
 
+             
+  function reproducir(a) {
 
+            var url = a;
+
+            $.get(url, function (respuesta) {
+
+                $("#contenedor").html(respuesta);
+            });
+            e.preventDefault();
+
+        }
 
 </script>

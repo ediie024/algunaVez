@@ -45,7 +45,8 @@
           <e p="_ViewStart.cshtml" t="Include" />
           <e p="Blog" t="Include">
             <e p="_Index.cshtml" t="Include" />
-            <e p="CrearBlog.cshtml" t="Include" />
+            <e p="CrearNota.cshtml" t="Include" />
+            <e p="EditarNota.cshtml" t="Include" />
             <e p="Index.cshtml" t="Include" />
           </e>
           <e p="Home" t="Include">

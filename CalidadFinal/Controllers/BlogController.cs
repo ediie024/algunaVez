@@ -1,3 +1,4 @@
+using System;
 using System.Collections.Generic;
 using System.Linq;
 using CalidadFinal.ConeccionBD;
@@ -16,8 +17,11 @@ namespace CalidadFinal.Controllers
 
         
 
-        public IActionResult Index()
+        public IActionResult Index(string busqueda)
         {
+
+            ViewBag.busqueda = busqueda;
+            ViewBag.etiquetas = _context.etiquetas.ToList();
             return View();
         }
         public IActionResult _Index(string busqueda="")
@@ -72,14 +76,15 @@ namespace CalidadFinal.Controllers
             }
 
             ViewBag.resumen = resumen;
-            ViewBag.etiquetas = etiquetas;
+            ViewBag.etiquetas = _context.etiquetas.ToList();
             ViewBag.detalles = DetalleNotasEtiquetas;
             return View(listaFinal);
             
         }
 
-        public IActionResult CrearBlog()
+        public IActionResult CrearNota()
         {
+            
             return View();
         }
 
@@ -89,6 +94,19 @@ namespace CalidadFinal.Controllers
             _context.notas.Remove(nota);
             _context.SaveChanges();
             return RedirectToAction("Index");
+        }
+        public IActionResult EditarNota(int IdNota)
+        {
+            ViewBag.Nota = _context.notas.Where(o => o.Id == IdNota).FirstOrDefault();
+            return View();
+        }
+        public IActionResult EditarNotaA(Nota nota)
+        {
+            nota.UltimaModificacion = DateTime.Now;
+            _context.notas.Update(nota);
+            _context.SaveChanges();
+            
+             return RedirectToAction("Index");
         }
     }
 }
