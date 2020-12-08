@@ -14,8 +14,11 @@
                 <h3 class="card-header">
                     <a style="color: #0b2e13" href="/Post/DetallePost?id=@item.Id">
                         <p style = "font-family:Arial, Helvetica, sans-serif;">
-                       @item.Titulo
+                            @item.Titulo
                         </p>
+                        <h5>
+                            @ViewBag.resumen[@item.Id]
+                        </h5>
                         
                     </a>
                 </h3>

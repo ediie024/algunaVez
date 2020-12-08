@@ -1,3 +1,4 @@
+using System.Collections.Generic;
 using System.Linq;
 using CalidadFinal.ConeccionBD;
 using Microsoft.AspNetCore.Mvc;
@@ -22,8 +23,23 @@ namespace CalidadFinal.Controllers
             {
                 notas = _context.notas.Where(o => o.Titulo.ToLower().Contains(busqueda)).ToList();
             }
-            
+            Dictionary<int,string> resumen = new Dictionary<int, string>();
+            var contenido="";
+            foreach (var item in notas)
+            {
+                if (item.Contenido.Length<50)
+                {
+                    contenido = item.Contenido;
+                }
+                else
+                {
+                     contenido = item.Contenido.Substring(0, 50); 
+                }
 
+                resumen.Add(item.Id,contenido);
+            }
+
+            ViewBag.resumen = resumen;
             ViewBag.etiquetas = etiquetas;
             ViewBag.detalles = DetalleNotasEtiquetas;
             return View(notas);
