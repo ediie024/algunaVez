@@ -46,6 +46,7 @@
           <e p="Blog" t="Include">
             <e p="_Index.cshtml" t="Include" />
             <e p="CrearNota.cshtml" t="Include" />
+            <e p="DetalleNota.cshtml" t="Include" />
             <e p="EditarNota.cshtml" t="Include" />
             <e p="Index.cshtml" t="Include" />
           </e>

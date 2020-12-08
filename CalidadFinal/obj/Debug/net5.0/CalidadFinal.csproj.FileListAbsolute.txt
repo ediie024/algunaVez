@@ -70,3 +70,4 @@ D:\Upn 2020-2\Calidad\ExamenFinal\CalidadFinal\CalidadFinal\obj\Debug\net5.0\Cal
 D:\Upn 2020-2\Calidad\ExamenFinal\CalidadFinal\CalidadFinal\obj\Debug\net5.0\Razor\Views\Blog\_Index.cshtml.g.cs
 D:\Upn 2020-2\Calidad\ExamenFinal\CalidadFinal\CalidadFinal\obj\Debug\net5.0\Razor\Views\Blog\CrearNota.cshtml.g.cs
 D:\Upn 2020-2\Calidad\ExamenFinal\CalidadFinal\CalidadFinal\obj\Debug\net5.0\Razor\Views\Blog\EditarNota.cshtml.g.cs
+D:\Upn 2020-2\Calidad\ExamenFinal\CalidadFinal\CalidadFinal\obj\Debug\net5.0\Razor\Views\Blog\DetalleNota.cshtml.g.cs

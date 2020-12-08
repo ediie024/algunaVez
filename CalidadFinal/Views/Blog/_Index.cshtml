@@ -16,14 +16,14 @@
         {
             <div style="background-color: #adb5bd" class="card">
                 <h3 class="card-header">
-                    <a style="color: #0b2e13" href="/Blog/DetallePost?id=@item.Id">
+                    <a style="color: #0b2e13" href="/Blog/DetalleNota?IdNota=@item.Id">
                         <p style="font-family:Arial, Helvetica, sans-serif;">
                             @item.Titulo
                         </p>
                     </a>
                 </h3>
                 <h5>
-                    @ViewBag.resumen[@item.Id] <a onclick="eliminar('/Blog/EliminarNotra?IdNota=@item.Id')" href="#">eliminar</a><a href="/Blog/EditarNota?IdNota=@item.Id">editar</a>
+                    @ViewBag.resumen[@item.Id] <a onclick="eliminar('/Blog/EliminarNotra?IdNota=@item.Id')" href="#">eliminar</a> --- <a href="/Blog/EditarNota?IdNota=@item.Id">editar</a>
                 </h5>
 
 

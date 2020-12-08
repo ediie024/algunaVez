@@ -87,6 +87,13 @@ namespace CalidadFinal.Controllers
             
             return View();
         }
+        public IActionResult CrearNotaA(Nota nota)
+        {
+            nota.UltimaModificacion=DateTime.Now;
+            _context.notas.Add(nota);
+            _context.SaveChanges();
+            return RedirectToAction("Index");
+        }
 
         public IActionResult EliminarNotra(int IdNota)
         {
@@ -102,11 +109,19 @@ namespace CalidadFinal.Controllers
         }
         public IActionResult EditarNotaA(Nota nota)
         {
-            nota.UltimaModificacion = DateTime.Now;
-            _context.notas.Update(nota);
+            var nota2 = _context.notas.Where(o => o.Id == nota.Id).FirstOrDefault();
+            nota2.Contenido= nota.Contenido;
+            nota2.Titulo= nota.Titulo;
+            nota2.UltimaModificacion = DateTime.Now;
             _context.SaveChanges();
             
              return RedirectToAction("Index");
+        }
+        public IActionResult DetalleNota(int IdNota)
+        {
+            var nota = _context.notas.Where(o => o.Id == IdNota).FirstOrDefault();
+            ViewBag.Nota = nota;
+            return View();
         }
     }
 }

@@ -6,7 +6,7 @@
      
  </form>
  
-    
+    <a onclick="eliminar('/Blog/CrearNota')" href="#">Crear</a>
 
 <div class="container">
     <div class="row">
@@ -17,7 +17,7 @@
                     @foreach (var item in ViewBag.etiquetas)
                     {
                         <tr>
-                            <td> <a id="buton" onclick="reproducir('/Blog/_index?busqueda=@item.Nombre')"href="#"  >@item.Nombre</a></td>
+                            <td> <a id="buton" onclick="Crear('/Blog/_index?busqueda=@item.Nombre')"href="#"  >@item.Nombre</a></td>
                             
                         </tr>
                         
@@ -26,13 +26,11 @@
                 </table>
 
             </div>
-        <div id="contenedor" class="col-sm-7">
+        <div id="contenedor" class="col-sm-10">
 
 
         </div>
-        <div class="col-sm-3">
-            
-        </div>
+        
         </div>
    
 </div>
@@ -66,3 +64,20 @@ init();
         }
 
 </script>
+ <script>
+ 
+              
+   function Crear(a) {
+ 
+             var url = a;
+ 
+             $.get(url, function (respuesta) {
+ 
+                 $("#contenedor").html(respuesta);
+             });
+             e.preventDefault();
+ 
+         }
+ 
+ </script>
+ 
