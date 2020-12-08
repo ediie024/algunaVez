@@ -82,5 +82,13 @@ namespace CalidadFinal.Controllers
         {
             return View();
         }
+
+        public IActionResult EliminarNotra(int IdNota)
+        {
+            var nota = _context.notas.Where(o => o.Id == IdNota).FirstOrDefault();
+            _context.notas.Remove(nota);
+            _context.SaveChanges();
+            return RedirectToAction("Index");
+        }
     }
 }
