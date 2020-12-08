@@ -1,6 +1,7 @@
 using System.Collections.Generic;
 using System.Linq;
 using CalidadFinal.ConeccionBD;
+using CalidadFinal.Models;
 using Microsoft.AspNetCore.Mvc;
 
 namespace CalidadFinal.Controllers
@@ -13,19 +14,50 @@ namespace CalidadFinal.Controllers
             this._context = _context;
         }
 
-        public IActionResult Index(string busqueda)
+        
+
+        public IActionResult Index()
         {
-            var notas = _context.notas.ToList();
+            return View();
+        }
+        public IActionResult _Index(string busqueda="")
+        {
+                      var notas = _context.notas.ToList();
+            var etiquetasBuscadas = new List<Etiqueta>();
             var etiquetas = _context.etiquetas.ToList();
             var DetalleNotasEtiquetas = _context.DetalleNotaEtiquetas.ToList();
 
             if (!string.IsNullOrEmpty(busqueda))
             {
-                notas = _context.notas.Where(o => o.Titulo.ToLower().Contains(busqueda)).ToList();
+                notas = _context.notas.Where(o => o.Titulo.ToLower().Contains(busqueda)|| o.Contenido.ToLower().Contains(busqueda)).ToList();
+                etiquetasBuscadas = _context.etiquetas.Where(o => o.Nombre.ToLower().Contains(busqueda)).ToList();
             }
+
+            var indicesEtiquetas = etiquetasBuscadas.Select(o => o.Id).ToList();
+            List<DetalleNotaEtiqueta> nuevaIndices = new List<DetalleNotaEtiqueta>();
+            foreach (var item in DetalleNotasEtiquetas)
+            {
+                if (indicesEtiquetas.Contains(item.IdEtiqueta))
+                {
+                    nuevaIndices.Add(item);
+                }
+            }
+
+            var TNotas = _context.notas.ToList();
+            List<Nota> nueva = new List<Nota>();
+            var indiceDetalles = nuevaIndices.Select(o => o.IdNota).ToList();
+            foreach (var item in TNotas)
+            {
+                if (indiceDetalles.Contains(item.Id))
+                {
+                    nueva.Add(item);
+                }
+            }
+
+            var listaFinal = nueva.Union(notas);
             Dictionary<int,string> resumen = new Dictionary<int, string>();
             var contenido="";
-            foreach (var item in notas)
+            foreach (var item in listaFinal)
             {
                 if (item.Contenido.Length<50)
                 {
@@ -42,7 +74,8 @@ namespace CalidadFinal.Controllers
             ViewBag.resumen = resumen;
             ViewBag.etiquetas = etiquetas;
             ViewBag.detalles = DetalleNotasEtiquetas;
-            return View(notas);
+            return View(listaFinal);
+            
         }
 
         public IActionResult CrearBlog()
